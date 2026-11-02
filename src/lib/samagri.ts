@@ -1,0 +1,330 @@
+export type Item = { id: string; name: string; qty: string; note: string };
+
+export type Group = { id: string; title: string; lede: string; items: Item[] };
+
+export const groups: Group[] = [
+  {
+    id: "people",
+    title: "People and cloth",
+    lede: "One priest sits the fire, the householders stay through the bali, and extra guests are optional. Cloth is newly washed, not still smelling of the last camphor.",
+    items: [
+      {
+        id: "priest",
+        name: "Priest",
+        qty: "1",
+        note: "He should know the house rite you are asking for; confirm his paddhati before you buy wood he will not use.",
+      },
+      {
+        id: "householders",
+        name: "Householders",
+        qty: "the couple, or the person in whose name the house stands",
+        note: "They need the hour free, with no delivery and no call booked across the homa.",
+      },
+      {
+        id: "cotton-cloth",
+        name: "Unbleached cotton cloth",
+        qty: "2 pieces, about a metre each",
+        note: "One goes under the kalaśas and one is the priest's seat. Wash them once and do not perfume them.",
+      },
+      {
+        id: "cotton-thread",
+        name: "New cotton thread",
+        qty: "1 small reel",
+        note: "For the neck of each kalaśa, and for a wrist thread if he ties one. A new spool is enough.",
+      },
+      {
+        id: "mats",
+        name: "Sitting mats",
+        qty: "2 or 3",
+        note: "Cotton or wool under the people, not a plastic sheet laid over the drawn squares.",
+      },
+      {
+        id: "towels",
+        name: "Hand towels",
+        qty: "2, clean",
+        note: "One for washing before the fire, one if a pot is wiped. Keep them off the maṇḍala.",
+      },
+      {
+        id: "seat-cloth",
+        name: "Extra seat cloth",
+        qty: "1, only if an elder or a second priest sits",
+        note: "Skip it for a quiet house rite rather than buying a synthetic shawl on the way.",
+      },
+    ],
+  },
+  {
+    id: "mandala",
+    title: "Maṇḍala and earth",
+    lede: "The eighty-one squares are drawn on a floor the priest can face with north at the top. Sweep first, and fill a cracked patch before any line is laid.",
+    items: [
+      {
+        id: "rice-flour",
+        name: "Rice flour or white stone powder",
+        qty: "500 g",
+        note: "For the lines. On a dark tile, rice flour shows more clearly than a chalk that stains the grout.",
+      },
+      {
+        id: "turmeric",
+        name: "Turmeric",
+        qty: "100 g",
+        note: "A pinch colours the akṣata, and a streak may go on the kalaśa. Ordinary kitchen turmeric is the right grade.",
+      },
+      {
+        id: "kumkum",
+        name: "Kumkum",
+        qty: "50 g",
+        note: "For forehead marks and the pot. A small box finishes one house with some left over.",
+      },
+      {
+        id: "akshata",
+        name: "Akṣata",
+        qty: "1 kg uncooked rice",
+        note: "Wash, dry, and tint with a little turmeric. Cooked rice from yesterday is not akṣata.",
+      },
+      {
+        id: "mustard",
+        name: "Yellow mustard seed",
+        qty: "100 g",
+        note: "Keep it dry for the lines or the bali portions he names. Do not roast it.",
+      },
+      {
+        id: "sesame",
+        name: "Black sesame",
+        qty: "200 g",
+        note: "Keep it apart from the turmeric rice. It is placed where he asks, often toward the fathers, and not eaten off the square.",
+      },
+      {
+        id: "nine-grains",
+        name: "Nine grains",
+        qty: "a small cup of each",
+        note: "Rice, wheat, barley, green gram, black gram, sesame, mustard, a pulse such as horse gram or chickpea, and one millet. Label the cups and let him place them.",
+      },
+      {
+        id: "sand",
+        name: "Clean sand",
+        qty: "a few handfuls",
+        note: "To seat a pot or bed the fire pan. Use unused sand, not a scoop from a pile mixed with cement.",
+      },
+      {
+        id: "mango-leaves",
+        name: "Mango leaves",
+        qty: "1 small bunch",
+        note: "For the mouths of the kalaśas. If the tree is bare, ask the priest rather than tying on plastic leaves.",
+      },
+    ],
+  },
+  {
+    id: "kalasas",
+    title: "Two kalaśas",
+    lede: "Two pots, one for water and one beside the fire. Use copper or brass you already own, and buy two only if the house has none.",
+    items: [
+      {
+        id: "kalasha-pots",
+        name: "Kalaśa pots",
+        qty: "2 copper or brass, or 2 new clay",
+        note: "Do not use a vessel that stored pickles. Rinse with plain water and fill only when he says.",
+      },
+      {
+        id: "coconuts",
+        name: "Coconuts",
+        qty: "5 or 6",
+        note: "Two may crown the pots. The others go to the door, the fire, and the offering as he directs. Choose nuts that still hold water.",
+      },
+      {
+        id: "water",
+        name: "Water",
+        qty: "1 clean bucket, plus a sealed bottle of Ganga water if you have it",
+        note: "If there is no Ganga water, freshly drawn water in a scrubbed vessel is what you use. Do not add perfume.",
+      },
+      {
+        id: "milk",
+        name: "Milk",
+        qty: "500 ml to 1 litre",
+        note: "Pañcagavya only if the priest can source it cleanly; otherwise milk and this water stand in the pot.",
+      },
+      {
+        id: "betel-leaves",
+        name: "Betel leaves",
+        qty: "30 to 50",
+        note: "Rinse and pat dry. Discard torn leaves before you count them onto the plate.",
+      },
+      {
+        id: "betel-nuts",
+        name: "Betel nuts",
+        qty: "20, whole",
+        note: "Plain nuts, not sweetened supari. A few may go into the pots; the rest wait for bali and the gift plate.",
+      },
+      {
+        id: "coins",
+        name: "Coins",
+        qty: "a small handful",
+        note: "He sets them in the water. Ordinary coins are acceptable; do not drop in a sum you meant to keep.",
+      },
+      {
+        id: "pot-rice",
+        name: "Rice to seat the nuts",
+        qty: "2 small handfuls",
+        note: "Some priests want the coconut resting on rice. Keep it aside so you are not scraping the drawn squares to find it.",
+      },
+    ],
+  },
+  {
+    id: "homa",
+    title: "Homa",
+    lede: "One kunda for one house, not a row of fires. If a second brāhmaṇa is called, ask before you double the wood; ghee is what usually runs short.",
+    items: [
+      {
+        id: "ghee",
+        name: "Ghee",
+        qty: "500 g to 1 kg",
+        note: "Cow ghee if you can buy it pure. Warm it so it pours, and do not quietly substitute oil.",
+      },
+      {
+        id: "samidh",
+        name: "Firewood sticks",
+        qty: "1 modest bundle",
+        note: "Mango or palasha if the shop has it, otherwise clean fruit-wood. No paint, no plywood, no varnish.",
+      },
+      {
+        id: "dry-coconut",
+        name: "Dry coconut",
+        qty: "2 halves",
+        note: "For pūrṇāhuti. Crack and dry them the day before so they catch. The priest offers them; do not toss a whole nut into the pan.",
+      },
+      {
+        id: "camphor",
+        name: "Camphor",
+        qty: "1 small pack",
+        note: "For the first flame and the lamp at the end. Keep it away from children and away from the ghee tin until it is wanted.",
+      },
+      {
+        id: "incense",
+        name: "Incense",
+        qty: "1 packet",
+        note: "Light fewer sticks than you think. If the room fills, open a north or east window rather than adding more.",
+      },
+      {
+        id: "lamp",
+        name: "Lamp, oil, and wick",
+        qty: "1 lamp you already have, about 50 ml oil",
+        note: "A plain brass or clay dīpa beside the kunda, with a cotton wick. A scented candle is not the standing light.",
+      },
+      {
+        id: "kunda",
+        name: "Fire pan or homa kunda",
+        qty: "1",
+        note: "A wide iron pan on bricks will do if you have no kunda. Bed it with the sand, and do not light it on bare marble.",
+      },
+      {
+        id: "matches",
+        name: "Matches or a working lighter",
+        qty: "1",
+        note: "Test it that morning. A dead lighter at the kunda is a poor start.",
+      },
+    ],
+  },
+  {
+    id: "bali",
+    title: "Bali and the door",
+    lede: "After the fire, small portions go to the squares and to the door. Cook the rice that morning; spiced leftovers are not bali.",
+    items: [
+      {
+        id: "cooked-rice",
+        name: "Plain cooked rice",
+        qty: "2 to 3 cups",
+        note: "Unsalted, or as lightly salted as the priest prefers. Spread it on leaf or steel, not in a plastic bag.",
+      },
+      {
+        id: "ash-gourd",
+        name: "Ash gourd",
+        qty: "1 small",
+        note: "For the door or the peace offering. Wash the wax off. A large festival gourd is more than one house needs.",
+      },
+      {
+        id: "leaves",
+        name: "Banana leaves or steel plates",
+        qty: "4 to 6",
+        note: "To portion bali toward the directions. Wash steel twice. If banana leaf is unavailable, steel is honest and can be used again.",
+      },
+      {
+        id: "flowers",
+        name: "Loose flowers",
+        qty: "1 small bunch, unsprayed",
+        note: "Petals for the squares that take them. Marigold or jasmine is ordinary and enough; a wired bouquet is not.",
+      },
+      {
+        id: "bali-bowls",
+        name: "Small bowls for mustard and sesame",
+        qty: "2",
+        note: "Fill them from the seed you already bought and carry them at the bali. This is not a second purchase.",
+      },
+      {
+        id: "threshold",
+        name: "Clear threshold",
+        qty: "the main door, shoes moved away",
+        note: "He may touch the frame with water and a coconut from the count above. Nothing should be stacked on the sill.",
+      },
+      {
+        id: "broom",
+        name: "Broom",
+        qty: "the one the house already owns",
+        note: "Sweep from the fire to the door before anyone sits, and do not sweep across offerings once they are placed.",
+      },
+    ],
+  },
+  {
+    id: "gifts",
+    title: "Gifts",
+    lede: "Dakṣiṇā is settled the day before so the rite does not stop for an envelope. Feed the people who actually sat.",
+    items: [
+      {
+        id: "dakshina",
+        name: "Dakṣiṇā",
+        qty: "1 sealed envelope",
+        note: "The amount you already agreed. Do not make the priest name a figure in front of guests.",
+      },
+      {
+        id: "gift-rice",
+        name: "Gift rice",
+        qty: "1 to 2 kg uncooked, separate from the akṣata",
+        note: "A sack he can carry. Do not hand over the rice you coloured for the squares.",
+      },
+      {
+        id: "produce",
+        name: "Vegetables and fruit",
+        qty: "1 modest bag",
+        note: "Seasonal and washed. One bag is a gift; a display crate is not required for a house fire.",
+      },
+      {
+        id: "gift-betel",
+        name: "Betel for the gift plate",
+        qty: "a dozen leaves and a few nuts",
+        note: "Set them on the cloth with the coconut, apart from the leaves already placed on the kalaśas.",
+      },
+      {
+        id: "gift-coconut",
+        name: "Coconut on the gift cloth",
+        qty: "1",
+        note: "Take it from the five or six if that count still allows, or buy one extra if the pots and the fire have used the rest.",
+      },
+      {
+        id: "gift-cloth",
+        name: "Dhoti or a plain cloth",
+        qty: "only if that is your family's custom",
+        note: "Skip it rather than buying a shiny shawl on the way home. If you do give cloth, let it be cotton.",
+      },
+      {
+        id: "jaggery",
+        name: "Jaggery",
+        qty: "250 g, if anyone who sat is fed",
+        note: "A small sweet, not a bakery cake. If no one else eats, leave it in the kitchen.",
+      },
+      {
+        id: "priest-meal",
+        name: "A meal or the ride home",
+        qty: "arranged before he arrives",
+        note: "If he crossed town, this is part of the gift. A tiffin of plain food is enough, and it should be ready when the fire ends.",
+      },
+    ],
+  },
+];
